@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kubernetes的安装界面</title>
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    <script src="./jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="./jquery-3.3.1/jquery.validate.min.js"></script>
+    <script src="./jquery-3.3.1/messages_zh.js"></script>
+    <script src="./popper/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.js"></script>
+
+    <style>
+        footer {
+            clear: both;
+            padding: 1em 0px 0px 0px !important;
+            text-align: center;
+            position: relative;
+            z-index: 33;
+            background: #ebf0f8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>Kubernete安装界面</h1>
+        </div>
+    </div>
+
+
+    <form method="post">
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">*master节点：</span>
+                    </div>
+                    <input type="text" class="form-control" name="master_node">
+                </div>
+
+                <div class="alert alert-light">可选设置：</div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">node 节 点：</span>
+                    </div>
+                    <input type="text" class="form-control" name="node_node">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">虚 拟 机 IP：</span>
+                    </div>
+                    <input type="text" class="form-control" name="vitrual_ip">
+                </div>
+
+                <label for="sel1">Ser代理:</label>
+                <select class="form-control" id="sel1" name="profix_strategy">
+                    <option value="iptables">iptables</option>
+                    <option value="ipvs">ipvs</option>
+                </select>
+                <br>
+
+                <label for="sel1">Kubernetes:</label>
+                <select class="form-control" id="sel1" name="version">
+                    <option value="v1.11.0">v1.11.0</option>
+                    <option value="v1.11.1">v1.11.1</option>
+                </select>
+                <br>
+
+            </div>
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-3">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">*SSH 密 码：</span>
+                    </div>
+                    <input type="text" class="form-control" name="ssh_pwd">
+                </div>
+                <div class="alert alert-light"></div>
+                <div class="form-group">
+                    <label for="sel1">高可用方案:</label>
+                    <select class="form-control" id="sel1" name="ha_strategy">
+                        <option value="nginx">nginx</option>
+                        <option value="vip">vip</option>
+                    </select>
+                    <br>
+
+                    <label for="sel1">CNI Strategy:</label>
+                    <select class="form-control" id="sel1" name="cni_strategy">
+                        <option value="flannel">flannel</option>
+                        <option value="calico">calico</option>
+                    </select>
+                    <br>
+
+                    <div class="alert alert-light"></div>
+                    <div class="container">
+                        <input type="submit" value="安装" style="color:#fff;background:#138496;border-color:#117a8b" />
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </form>
+
+    <footer id="fh5co-footer" role="contentinfo">
+        <div class="container footercontainer">
+            <div class="row copyright">
+                <div class="col-md-12 text-center">
+                    <p>
+                        <small><a href="#">Copyright © 2018 by GMT</a></small>
+                    </p>
+                    <p> <small>Powered by <a href="#">西安端怡科技有限公司</a></small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
